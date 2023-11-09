@@ -10,7 +10,7 @@ const LiquidSideNav = () => {
     <div className="min-w-screen flex justify-end">
       <div className="flex items-center pr-5 pt-5 text-white">
         <motion.button
-          whileHover={{ rotate: "180deg" }}
+          whileHover={{ rotate: "170deg" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
           className="text-3xl bg-black text-slate-300 hover:text-slate-100 transition-colors p-4 rounded-full"
@@ -32,14 +32,16 @@ const Nav = ({
 }) => {
   return (
     <motion.nav
-      className="fixed top-0 bottom-0 w-screen bg-slate-600"
+      className={`fixed top-0 bottom-0 w-screen bg-slate-600 ${
+        isOpen ? "z-50" : "z-10"
+      }`}
       animate={isOpen ? "open" : "closed"}
       variants={navVariants}
       initial="closed"
     >
       <motion.button
         className="text-3xl bg-black text-slate-300 hover:text-slatte-100 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full absolute top-8 right-8"
-        whileHover={{ rotate: "180deg" }}
+        whileHover={{ rotate: "150deg" }}
         onClick={() => setIsOpen(false)}
         whileTap={{ scale: 0.9 }}
       >
@@ -61,7 +63,7 @@ const Nav = ({
 const NavLink = ({ text }: { text: string }) => {
   return (
     <motion.a
-      className="inline-block z-10 text-slate-300 w-fit font-black text-7xl hover:text-slate-100 transition-colors"
+      className="inline-block z-10 text-slate-100 w-fit font-black text-7xl hover:text-slate-900 transition-colors"
       variants={navLinkVariants}
       transition={{
         type: "spring",
