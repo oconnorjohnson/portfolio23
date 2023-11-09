@@ -89,12 +89,18 @@ const navVariants = {
     borderTopLeftRadius: "0vw",
     borderBottomLeftRadius: "0vw",
     opacity: 1,
+    transition: {
+      duration: 0.25,
+    },
   },
   closed: {
     x: "100%",
     borderTopLeftRadius: "50vw",
     borderBottomLeftRadius: "50vw",
     opacity: 0,
+    transition: {
+      duration: 0.25,
+    },
   },
 };
 

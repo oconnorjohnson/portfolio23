@@ -49,10 +49,33 @@ const TiltCard = () => {
     y.set(0);
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const rect = (e.target as HTMLElement).getBoundingClientRect();
+
+    const width = rect.width;
+    const height = rect.height;
+
+    const touchX = e.touches[0].clientX - rect.left;
+    const touchY = e.touches[0].clientY - rect.top;
+
+    const xPct = touchX / width - 0.5;
+    const yPct = touchY / height - 0.5;
+
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleTouchEnd = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
     <motion.div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       style={{
         rotateY,
         rotateX,
