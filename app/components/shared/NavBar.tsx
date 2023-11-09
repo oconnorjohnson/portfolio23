@@ -3,6 +3,45 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 
+const navVariants = {
+  open: {
+    x: "0%",
+    borderTopLeftRadius: "0vw",
+    borderBottomLeftRadius: "0vw",
+    opacity: 1,
+    transition: {
+      duration: 0.25,
+    },
+  },
+  closed: {
+    x: "100%",
+    borderTopLeftRadius: "50vw",
+    borderBottomLeftRadius: "50vw",
+    opacity: 0,
+    transition: {
+      duration: 0.25,
+    },
+  },
+};
+
+const linkWrapperVariants = {
+  open: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+  closed: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const navLinkVariants = {
+  open: { x: 0 },
+  closed: { x: 25 },
+};
+
 const LiquidSideNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -54,6 +93,7 @@ const Nav = ({
         <NavLink text="Home" />
         <NavLink text="Work" />
         <NavLink text="About" />
+        <NavLink text="Blog" />
         <NavLink text="Contact" />
       </motion.div>
     </motion.nav>
@@ -63,15 +103,16 @@ const Nav = ({
 const NavLink = ({ text }: { text: string }) => {
   return (
     <motion.a
-      className="inline-block z-10 text-slate-100 w-fit font-black text-7xl hover:text-slate-900 transition-colors"
+      className="inline-block pl-8 z-10 text-slate-100 w-fit font-black text-7xl hover:text-slate-900 transition-colors"
       variants={navLinkVariants}
       transition={{
         type: "spring",
-        damping: 4,
+        damping: 6,
       }}
       whileHover={{
         y: -15,
         rotate: "-7.5deg",
+        scale: 1.5,
       }}
       rel="nofollow"
       href="#"
@@ -82,42 +123,3 @@ const NavLink = ({ text }: { text: string }) => {
 };
 
 export default LiquidSideNav;
-
-const navVariants = {
-  open: {
-    x: "0%",
-    borderTopLeftRadius: "0vw",
-    borderBottomLeftRadius: "0vw",
-    opacity: 1,
-    transition: {
-      duration: 0.25,
-    },
-  },
-  closed: {
-    x: "100%",
-    borderTopLeftRadius: "50vw",
-    borderBottomLeftRadius: "50vw",
-    opacity: 0,
-    transition: {
-      duration: 0.25,
-    },
-  },
-};
-
-const linkWrapperVariants = {
-  open: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-  closed: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const navLinkVariants = {
-  open: { x: 0 },
-  closed: { x: 25 },
-};
