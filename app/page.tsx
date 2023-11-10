@@ -16,6 +16,7 @@ export default function Home() {
           onClick={() => {
             router.push("/");
           }}
+          icon={FiHome}
         >
           Home
         </Button>

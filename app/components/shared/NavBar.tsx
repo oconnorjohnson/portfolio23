@@ -53,7 +53,7 @@ const LiquidSideNav = () => {
           whileHover={{ rotate: "170deg" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
-          className="text-3xl bg-black text-slate-300 hover:text-slate-100 transition-colors p-4 rounded-full"
+          className="text-3xl bg-white text-black dark:bg-black dark:text-white hover:text-slate-800 dark:hover:text-slate-200 transition-colors p-4 rounded-full"
         >
           <FiMenu />
         </motion.button>
@@ -86,7 +86,7 @@ const Nav = ({
       initial="closed"
     >
       <motion.button
-        className="text-3xl bg-black text-slate-300 hover:text-slate-100 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full ml-4 mt-4"
+        className="text-3xl bg-white text-black hover:text-slate-800 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full ml-4 mt-4"
         whileHover={{ rotate: "150deg" }}
         onClick={() => setIsOpen(false)}
         whileTap={{ scale: 0.9 }}
