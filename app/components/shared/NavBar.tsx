@@ -2,6 +2,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
+import DarkModeToggle from "./DarkModeToggle";
 
 const navVariants = {
   open: {
@@ -46,8 +47,8 @@ const LiquidSideNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-w-screen bg-white dark:bg-black flex justify-end">
-      <div className="flex items-center pr-5 pt-5 text-white">
+    <div className="min-w-screen bg-white py-4 px-4 dark:bg-black transition-colors flex flex-col-3 justify-between items-center">
+      <div className="text-white">
         <motion.button
           whileHover={{ rotate: "170deg" }}
           whileTap={{ scale: 0.9 }}
@@ -56,6 +57,12 @@ const LiquidSideNav = () => {
         >
           <FiMenu />
         </motion.button>
+      </div>
+      <div className="text-black font-extrabold text-2xl transition-colors dark:text-white">
+        Daniel <a className="font-light ">O'Connor</a> Johnson
+      </div>
+      <div>
+        <DarkModeToggle />
       </div>
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
@@ -79,7 +86,7 @@ const Nav = ({
       initial="closed"
     >
       <motion.button
-        className="text-3xl bg-black text-slate-300 hover:text-slatte-100 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full absolute top-8 right-8"
+        className="text-3xl bg-black text-slate-300 hover:text-slate-100 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full ml-4 mt-4"
         whileHover={{ rotate: "150deg" }}
         onClick={() => setIsOpen(false)}
         whileTap={{ scale: 0.9 }}

@@ -7,9 +7,9 @@ const ToggleWrapper = () => {
   const [mode, setMode] = useState<"dark" | "light">("dark");
   return (
     <div
-      className={`px-4 h-[250px] flex items-center justify-center transition-colors ${
-        mode === "dark" ? "bg-slate-900" : "bg-slate-50"
-      }`}
+    // className={`px-4 flex items-center justify-end transition-colors ${
+    //   mode === "dark" ? "bg-black" : "bg-white"
+    // }`}
     >
       <DarkModeToggle mode={mode} setMode={setMode} />
     </div>
