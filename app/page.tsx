@@ -10,7 +10,6 @@ export default function Home() {
       <main>
         <DarkModeToggle />
         <NavBar />
-
         <Hero />
       </main>
     </>

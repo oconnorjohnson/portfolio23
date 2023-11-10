@@ -46,7 +46,7 @@ const LiquidSideNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-w-screen flex justify-end">
+    <div className="min-w-screen bg-white dark:bg-black flex justify-end">
       <div className="flex items-center pr-5 pt-5 text-white">
         <motion.button
           whileHover={{ rotate: "170deg" }}

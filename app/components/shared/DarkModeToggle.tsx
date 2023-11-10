@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
 import { BsFillCloudyFill, BsStarFill } from "react-icons/bs";
+import { useEffect } from "react";
 
 const ToggleWrapper = () => {
   const [mode, setMode] = useState<"dark" | "light">("dark");
@@ -22,9 +23,31 @@ const DarkModeToggle = ({
   mode: "light" | "dark";
   setMode: Dispatch<SetStateAction<"dark" | "light">>;
 }) => {
+  const toggleMode = () => {
+    const newMode = mode === "dark" ? "light" : "dark";
+    setMode(newMode);
+    if (typeof window !== "undefined") {
+      document.documentElement.classList.toggle("dark", newMode === "dark");
+      window.localStorage.setItem("darkMode", newMode);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedMode = window.localStorage.getItem("darkMode") as
+        | "light"
+        | "dark"
+        | null;
+      if (savedMode) {
+        setMode(savedMode);
+        document.documentElement.classList.toggle("dark", savedMode === "dark");
+      }
+    }
+  }, []);
+
   return (
     <button
-      onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+      onClick={toggleMode}
       className={`p-2 w-28 rounded-full flex shadow-lg relative bg-gradient-to-b ${
         mode === "light"
           ? "justify-end from-blue-500 to-sky-300"
