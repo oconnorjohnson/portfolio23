@@ -4,7 +4,7 @@ import { FiMousePointer } from "react-icons/fi";
 
 const Example = () => {
   return (
-    <div className="grid w-full place-content-center bg-gradient-to-br from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
+    <div className="grid w-full place-content-center px-8 py-12 text-slate-900">
       <TiltCard />
     </div>
   );
@@ -85,14 +85,14 @@ const TiltCard = () => {
     >
       <div
         style={{
-          transform: "translateZ(75px)",
+          transform: "translateZ(150px)",
           transformStyle: "preserve-3d",
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
       >
         <FiMousePointer
           style={{
-            transform: "translateZ(75px)",
+            transform: "translateZ(150px)",
           }}
           className="mx-auto text-4xl"
         />
