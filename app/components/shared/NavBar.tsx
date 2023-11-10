@@ -81,7 +81,7 @@ const Nav = ({
 }) => {
   return (
     <motion.nav
-      className={`fixed top-0 bottom-0 w-screen bg-gradient-to-br from-blue-500 to-sky-300 dark:from-indigo-700 dark:to-indigo-300 ${
+      className={`fixed top-0 bottom-0 w-screen bg-gradient-to-b from-blue-500 to-sky-300 dark:from-indigo-700 dark:to-indigo-300 ${
         isOpen ? "z-50" : "z-10"
       }`}
       animate={isOpen ? "open" : "closed"}

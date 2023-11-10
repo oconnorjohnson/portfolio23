@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiMousePointer } from "react-icons/fi";
+import { FcBusinessman } from "react-icons/fc";
 
 const TiltCard = () => {
   const x = useMotionValue(0);
@@ -73,28 +74,47 @@ const TiltCard = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative text-black dark:text-white transition-colors h-96 w-72 rounded-xl bg-gradient-to-br from-blue-500 to-sky-300 dark:from-indigo-700 dark:to-indigo-300"
+      className="relative text-black dark:text-white transition-colors h-96 w-72 rounded-xl bg-gradient-to-b from-blue-500 to-sky-300 dark:from-indigo-700 dark:to-indigo-300"
     >
       <div
         style={{
           transform: "translateZ(150px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white dark:bg-slate-800 transition-colors shadow-lg"
+        className="absolute inset-4 grid rounded-xl bg-white dark:bg-slate-800 transition-colors shadow-lg"
       >
-        <FiMousePointer
+        <div className="flex flex-col-2 space-between px-2">
+          <FcBusinessman
+            style={{
+              transform: "translateZ(100px)",
+            }}
+            className="mx-auto text-8xl"
+          />
+          <p
+            style={{
+              transform: "translateZ(50px)",
+            }}
+            className="text-start text-large font-light"
+          >
+            Hi, my name is:
+          </p>
+        </div>
+        <p
           style={{
             transform: "translateZ(150px)",
           }}
-          className="mx-auto text-4xl"
-        />
-        <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
           className="text-center text-2xl font-bold"
         >
-          HOVER ME
+          Daniel!
+        </p>
+        <p
+          style={{
+            transform: "translateZ(85px)",
+          }}
+          className="text-start text-medium"
+        >
+          This is a little paragraph about me. I love x y and z, and i'm going
+          to need to fill this out later. Divee deep and learn about me!
         </p>
       </div>
     </motion.div>
