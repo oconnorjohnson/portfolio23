@@ -33,7 +33,6 @@ The `Modal` component accepts the following props:
 Here is an example of how to use the `Modal` component:
 
 ```
-typescript
 import { ModalButton } from "@/app/components/shared/Modal";
 import { FiHome } from "react-icons/fi";
 

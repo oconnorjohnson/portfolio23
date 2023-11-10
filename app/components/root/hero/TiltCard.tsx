@@ -2,14 +2,6 @@ import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiMousePointer } from "react-icons/fi";
 
-const Example = () => {
-  return (
-    <div className="grid w-full place-content-center px-8 py-12 text-slate-900">
-      <TiltCard />
-    </div>
-  );
-};
-
 const TiltCard = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -81,14 +73,14 @@ const TiltCard = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative text-black dark:text-white transition-colors h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
           transform: "translateZ(150px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+        className="absolute inset-4 grid place-content-center rounded-xl bg-slate-200 dark:bg-slate-800 transition-colors shadow-lg"
       >
         <FiMousePointer
           style={{
@@ -109,4 +101,4 @@ const TiltCard = () => {
   );
 };
 
-export default Example;
+export default TiltCard;

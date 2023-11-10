@@ -7,7 +7,7 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
-      <main>
+      <main className="min-h-screen bg-white dark:bg-black transition-colors">
         <NavBar />
         <Hero />
       </main>
