@@ -95,9 +95,7 @@ const TiltCard = () => {
               transform: "translateZ(50px)",
             }}
             className="text-start text-large font-light"
-          >
-            Hi, my name is:
-          </p>
+          ></p>
         </div>
         <p
           style={{
@@ -105,17 +103,15 @@ const TiltCard = () => {
           }}
           className="text-center text-2xl font-bold"
         >
-          Daniel!
+          Welcome to my humble abode.
         </p>
-        <p
-          style={{
-            transform: "translateZ(85px)",
-          }}
-          className="text-start text-medium"
+        <div
+          style={{ transform: "translateZ(65px)" }}
+          className="bg-slate-200 mx-2 p-2 text-start text-medium rounded-2xl dark:bg-slate-900"
         >
           This is a little paragraph about me. I love x y and z, and i'm going
           to need to fill this out later. Divee deep and learn about me!
-        </p>
+        </div>
       </div>
     </motion.div>
   );
