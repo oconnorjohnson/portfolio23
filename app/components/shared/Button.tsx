@@ -6,7 +6,7 @@ type ButtonProps = {
   icon?: IconType;
 };
 
-const RoundedSlideButton: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   icon: IconComponent,
@@ -37,4 +37,4 @@ const RoundedSlideButton: React.FC<ButtonProps> = ({
   );
 };
 
-export default RoundedSlideButton;
+export default Button;
