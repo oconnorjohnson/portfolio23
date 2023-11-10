@@ -53,15 +53,18 @@ const LiquidSideNav = () => {
           whileHover={{ rotate: "170deg" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
-          className="text-3xl bg-black text-slate-300 hover:text-slate-100 transition-colors p-4 rounded-full"
+          className="text-3xl bg-white text-black dark:bg-black dark:text-white hover:text-slate-800 dark:hover:text-slate-200 transition-colors p-4 rounded-full"
         >
           <FiMenu />
         </motion.button>
       </div>
-      <div className="text-black font-extrabold text-2xl transition-colors dark:text-white">
-        Daniel <a className="font-light ">O'Connor</a> Johnson
+      <div className="hidden sm:block text-black font-extrabold text-2xl transition-colors dark:text-white">
+        Daniel <span className="font-light ">O'Connor</span> Johnson
       </div>
-      <div>
+      <div className="sm:hidden text-black font-extrabold text-xl transition-colors dark:text-white">
+        Daniel Johnson
+      </div>
+      <div className="transform scale-75">
         <DarkModeToggle />
       </div>
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -86,7 +89,7 @@ const Nav = ({
       initial="closed"
     >
       <motion.button
-        className="text-3xl bg-black text-slate-300 hover:text-slate-100 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full ml-4 mt-4"
+        className="text-3xl bg-white text-black hover:text-slate-800 border-[1px] border-transparent hover:border-slate-300 transition-colors p-4 rounded-full ml-4 mt-4"
         whileHover={{ rotate: "150deg" }}
         onClick={() => setIsOpen(false)}
         whileTap={{ scale: 0.9 }}
