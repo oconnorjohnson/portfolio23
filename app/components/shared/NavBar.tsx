@@ -58,10 +58,13 @@ const LiquidSideNav = () => {
           <FiMenu />
         </motion.button>
       </div>
-      <div className="text-black font-extrabold text-2xl transition-colors dark:text-white">
-        Daniel <a className="font-light ">O'Connor</a> Johnson
+      <div className="hidden sm:block text-black font-extrabold text-2xl transition-colors dark:text-white">
+        Daniel <span className="font-light ">O'Connor</span> Johnson
       </div>
-      <div>
+      <div className="sm:hidden text-black font-extrabold text-xl transition-colors dark:text-white">
+        Daniel Johnson
+      </div>
+      <div className="transform scale-75">
         <DarkModeToggle />
       </div>
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
