@@ -73,14 +73,14 @@ const TiltCard = () => {
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative text-black dark:text-white transition-colors h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative text-black dark:text-white transition-colors h-96 w-72 rounded-xl bg-gradient-to-br from-blue-500 to-sky-300 dark:from-indigo-700 dark:to-indigo-300"
     >
       <div
         style={{
           transform: "translateZ(150px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-slate-200 dark:bg-slate-800 transition-colors shadow-lg"
+        className="absolute inset-4 grid place-content-center rounded-xl bg-white dark:bg-slate-800 transition-colors shadow-lg"
       >
         <FiMousePointer
           style={{

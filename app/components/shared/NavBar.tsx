@@ -81,7 +81,7 @@ const Nav = ({
 }) => {
   return (
     <motion.nav
-      className={`fixed top-0 bottom-0 w-screen bg-slate-600 ${
+      className={`fixed top-0 bottom-0 w-screen bg-gradient-to-br from-blue-500 to-sky-300 dark:from-indigo-700 dark:to-indigo-300 ${
         isOpen ? "z-50" : "z-10"
       }`}
       animate={isOpen ? "open" : "closed"}
@@ -113,7 +113,7 @@ const Nav = ({
 const NavLink = ({ text }: { text: string }) => {
   return (
     <motion.a
-      className="inline-block pl-8 z-10 text-slate-100 w-fit font-black text-7xl hover:text-slate-900 transition-colors"
+      className="inline-block pl-8 z-10 text-white w-fit font-black text-7xl hover:text-black dark:text-black dark:hover:text-white transition-colors"
       variants={navLinkVariants}
       transition={{
         type: "spring",
