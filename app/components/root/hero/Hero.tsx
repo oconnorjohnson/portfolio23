@@ -76,7 +76,7 @@ export default function Hero() {
   const quals = ["accessible,", "performant,", "& scaleable"];
   return (
     <>
-      <div className="flex p-32 flex-col lg:flex-row lg:justify-around bg-white dark:bg-black transition-colors">
+      <div className="flex p-32 flex-col items-center xl:flex-row xl:justify-around bg-white dark:bg-black transition-colors">
         {/* <div className="text-black flex flex-col items-start font-light text-4xl dark:text-white transition-colors max-w-2xl">
           I'm building
           <Box
@@ -92,6 +92,7 @@ export default function Hero() {
         </div> */}
 
         <TiltCard />
+        <div className="py-4 xl:hidden" />
         <Form />
       </div>
     </>

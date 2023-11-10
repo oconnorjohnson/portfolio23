@@ -24,7 +24,7 @@ const TerminalContact = () => {
         onClick={() => {
           inputRef.current?.focus();
         }}
-        className="h-96 bg-slate-400 dark:bg-slate-800 transition-colors backdrop-blur rounded-lg w-full max-w-3xl mx-auto overflow-y-scroll shadow-xl cursor-text font-mono"
+        className="h-96 w-1/3 md:w-1/2 bg-slate-400 dark:bg-slate-800 transition-colors backdrop-blur rounded-lg xl:w-full max-w-3xl mx-auto overflow-y-scroll shadow-xl cursor-text font-mono"
       >
         <TerminalHeader />
         <TerminalBody inputRef={inputRef} containerRef={containerRef} />
@@ -39,7 +39,7 @@ const TerminalHeader = () => {
       <div className="w-3 h-3 rounded-full bg-red-500" />
       <div className="w-3 h-3 rounded-full bg-yellow-500" />
       <div className="w-3 h-3 rounded-full bg-green-500" />
-      <span className="text-sm text-slate-800 dark:text-white transition-colors font-semibold absolute left-[50%] -translate-x-[50%]">
+      <span className="hidden md:block text-sm text-slate-800 dark:text-white transition-colors font-semibold absolute left-[50%] -translate-x-[50%]">
         recruitme@danielojohnson.com
       </span>
     </div>
