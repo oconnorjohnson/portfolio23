@@ -1,6 +1,6 @@
 # Portfolio Documentation
 
-## Reuseable Components
+## Components
 
 ### Button
 
