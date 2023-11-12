@@ -58,10 +58,10 @@ const LiquidSideNav = () => {
           <FiMenu />
         </motion.button>
       </div>
-      <div className="hidden sm:block text-black font-extrabold text-2xl transition-colors dark:text-white">
+      <div className="hidden sm:block text-gray-800 font-extrabold text-2xl transition-colors dark:text-gray-200">
         Daniel <span className="font-light ">O'Connor</span> Johnson
       </div>
-      <div className="sm:hidden text-black font-extrabold text-xl transition-colors dark:text-white">
+      <div className="sm:hidden text-gray-800 font-extrabold text-xl transition-colors dark:text-gray-200">
         Daniel Johnson
       </div>
       <div className="transform scale-75">
