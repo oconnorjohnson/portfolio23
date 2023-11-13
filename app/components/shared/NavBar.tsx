@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import DarkModeToggle from "./DarkModeToggle";
+import { useRouter } from "next/navigation";
 
 const navVariants = {
   open: {
@@ -100,20 +101,25 @@ const Nav = ({
         variants={linkWrapperVariants}
         className="flex flex-col gap-4 absolute bottom-8 left-8"
       >
-        <NavLink text="Home" />
-        <NavLink text="Work" />
-        <NavLink text="About" />
-        <NavLink text="Blog" />
-        <NavLink text="Contact" />
+        <NavLink href="/" text="Home" />
+        <NavLink href="/work" text="Work" />
+        <NavLink href="/about" text="About" />
+        <NavLink href="/blog" text="Blog" />
+        <NavLink href="/contact" text="Contact" />
       </motion.div>
     </motion.nav>
   );
 };
 
-const NavLink = ({ text }: { text: string }) => {
+const NavLink = ({ text, href }: { text: string; href: string }) => {
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push(href);
+  };
   return (
     <motion.a
-      className="inline-block pl-8 z-10 text-white w-fit font-black text-7xl hover:text-black dark:text-black dark:hover:text-white transition-colors"
+      className="inline-block pl-8 z-10 text-white w-fit font-black text-7xl hover:text-black dark:text-black dark:hover:text-white transition-colors cursor-pointer"
       variants={navLinkVariants}
       transition={{
         type: "spring",
@@ -125,7 +131,7 @@ const NavLink = ({ text }: { text: string }) => {
         scale: 1.5,
       }}
       rel="nofollow"
-      href="#"
+      onClick={handleClick}
     >
       {text}
     </motion.a>
