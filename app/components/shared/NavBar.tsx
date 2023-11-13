@@ -3,6 +3,8 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import DarkModeToggle from "./DarkModeToggle";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const navVariants = {
   open: {
@@ -58,12 +60,14 @@ const LiquidSideNav = () => {
           <FiMenu />
         </motion.button>
       </div>
-      <div className="hidden sm:block text-black font-extrabold text-2xl transition-colors dark:text-white">
-        Daniel <span className="font-light ">O'Connor</span> Johnson
-      </div>
-      <div className="sm:hidden text-black font-extrabold text-xl transition-colors dark:text-white">
-        Daniel Johnson
-      </div>
+      <Link href="/">
+        <div className="hidden sm:block text-gray-800 font-extrabold text-2xl transition-colors dark:text-gray-200">
+          Daniel <span className="font-light ">O&apos;Connor</span> Johnson
+        </div>
+        <div className="sm:hidden text-gray-800 font-extrabold text-xl transition-colors dark:text-gray-200">
+          Daniel Johnson
+        </div>
+      </Link>
       <div className="transform scale-75">
         <DarkModeToggle />
       </div>
@@ -100,20 +104,25 @@ const Nav = ({
         variants={linkWrapperVariants}
         className="flex flex-col gap-4 absolute bottom-8 left-8"
       >
-        <NavLink text="Home" />
-        <NavLink text="Work" />
-        <NavLink text="About" />
-        <NavLink text="Blog" />
-        <NavLink text="Contact" />
+        <NavLink href="/" text="Home" />
+        <NavLink href="/work" text="Work" />
+        <NavLink href="/about" text="About" />
+        <NavLink href="/blog" text="Blog" />
+        <NavLink href="/contact" text="Contact" />
       </motion.div>
     </motion.nav>
   );
 };
 
-const NavLink = ({ text }: { text: string }) => {
+const NavLink = ({ text, href }: { text: string; href: string }) => {
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push(href);
+  };
   return (
     <motion.a
-      className="inline-block pl-8 z-10 text-white w-fit font-black text-7xl hover:text-black dark:text-black dark:hover:text-white transition-colors"
+      className="inline-block pl-8 z-10 text-white w-fit font-black text-7xl hover:text-black dark:text-black dark:hover:text-white transition-colors cursor-pointer"
       variants={navLinkVariants}
       transition={{
         type: "spring",
@@ -125,7 +134,7 @@ const NavLink = ({ text }: { text: string }) => {
         scale: 1.5,
       }}
       rel="nofollow"
-      href="#"
+      onClick={handleClick}
     >
       {text}
     </motion.a>

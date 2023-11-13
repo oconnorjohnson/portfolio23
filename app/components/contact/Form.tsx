@@ -164,7 +164,7 @@ const Summary = ({ questions, setQuestions }: SummaryProps) => {
 
   return (
     <>
-      <p>Beautiful! Here's what we've got:</p>
+      <p>Beautiful! Here&apos;s what we&apos;ve got:</p>
       {questions.map((q) => {
         return (
           <p key={q.key}>
@@ -176,7 +176,7 @@ const Summary = ({ questions, setQuestions }: SummaryProps) => {
       {complete ? (
         <p className="text-emerald-300">
           <FiCheckCircle className="inline-block mr-2" />
-          <span>Sent! We'll get back to you ASAP 😎</span>
+          <span>Sent! We&apos;ll get back to you ASAP 😎</span>
         </p>
       ) : (
         <div className="flex gap-2 mt-2">
@@ -227,7 +227,7 @@ const CurLine = ({
     setText(e.target.value);
     scrollToBottom();
   };
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     return () => setFocused(false);
   }, []);

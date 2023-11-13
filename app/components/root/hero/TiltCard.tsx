@@ -1,7 +1,11 @@
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
-import { FcBusinessman } from "react-icons/fc";
+import { TbBrandNextjs } from "react-icons/tb";
+import { IoLogoVercel } from "react-icons/io5";
+import { SiTypescript, SiTrpc, SiTailwindcss, SiPython } from "react-icons/si";
+import { DiJavascript } from "react-icons/di";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaNode } from "react-icons/fa";
 
 const TiltCard = () => {
   const x = useMotionValue(0);
@@ -81,36 +85,88 @@ const TiltCard = () => {
           transform: "translateZ(150px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid rounded-xl bg-white dark:bg-slate-800 transition-colors shadow-lg"
+        className="absolute inset-4 grid grid-cols-3 my-4 rounded-xl bg-white dark:bg-slate-800 transition-colors shadow-lg"
       >
-        <div className="flex flex-col-2 space-between px-2">
-          <FcBusinessman
-            style={{
-              transform: "translateZ(100px)",
-            }}
-            className="mx-auto text-8xl"
-          />
-          <p
-            style={{
-              transform: "translateZ(50px)",
-            }}
-            className="text-start text-large font-light"
-          ></p>
-        </div>
-        <p
-          style={{
-            transform: "translateZ(150px)",
-          }}
-          className="text-center text-2xl font-bold"
-        >
-          Welcome to my humble abode.
-        </p>
         <div
-          style={{ transform: "translateZ(65px)" }}
-          className="bg-slate-200 mx-2 p-2 text-start text-medium rounded-2xl dark:bg-slate-900"
+          style={{
+            transform: "translateZ(180px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl pt-12"
         >
-          This is a little paragraph about me. I love x y and z, and i'm going
-          to need to fill this out later. Divee deep and learn about me!
+          <TbBrandNextjs />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(155px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl pt-12 "
+        >
+          <IoLogoVercel />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(200px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl pt-12 "
+        >
+          <SiTypescript />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(160px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl "
+        >
+          <SiTrpc />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(190px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl "
+        >
+          <SiTailwindcss />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(140px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl "
+        >
+          <SiPython />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(140px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl "
+        >
+          <DiJavascript />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(175px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl "
+        >
+          <BiLogoPostgresql />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(185px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="flex justify-center align-center text-5xl "
+        >
+          <FaNode />
         </div>
       </div>
     </motion.div>
