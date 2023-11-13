@@ -31,7 +31,7 @@ const DarkModeToggle = ({
       window.localStorage.setItem("darkMode", newMode);
     }
   };
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedMode = window.localStorage.getItem("darkMode") as
