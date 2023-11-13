@@ -6,7 +6,7 @@ const VerticalSlideFeatures = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <section className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-6 bg-white px-4 py-12 md:flex-row md:gap-12 md:px-8">
+    <section className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-6 bg-white dark:bg-black transition-colors px-4 py-12 md:flex-row md:gap-12 md:px-8">
       <AnimatePresence mode="wait">
         {FEATURES.map((tab, index) => {
           return selected === index ? (
@@ -108,16 +108,8 @@ interface ExampleFeatureProps {
 const ExampleFeature = ({ text }: ExampleFeatureProps) => (
   <div className="w-full">
     <div className="relative h-[500px] w-full rounded-xl bg-slate-800 shadow-xl">
-      <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
-        <div className="h-3 w-3 rounded-full bg-red-500" />
-        <div className="h-3 w-3 rounded-full bg-yellow-500" />
-        <div className="h-3 w-3 rounded-full bg-green-500" />
-      </div>
       <div className="p-2">
-        <p className="font-mono text-sm text-slate-200">
-          <span className="text-green-300">~</span> Replace this with a demo of
-          your product 🚀
-        </p>
+        <p className="font-mono text-sm text-slate-200">{text}</p>
       </div>
 
       <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-3xl font-bold text-slate-700">
