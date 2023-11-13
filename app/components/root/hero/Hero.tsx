@@ -8,7 +8,7 @@ const WaterDropHero = () => {
   const router = useRouter();
   return (
     <>
-      <section className="text-gray-800 dark:text-slate-200 transition-colors flex flex-col-2 justify-around items-center overflow-hidden bg-white dark:bg-black px-8 py-24 md:px-12 md:py-32">
+      <section className="text-gray-800 dark:text-slate-200 transition-colors flex flex-col-2 justify-around items-center overflow-hidden bg-white dark:bg-black px-8 py-4  md:px-12 md:py-32">
         <div className="">
           <div className="pointer-events-none relative z-10">
             <Reveal>
@@ -49,7 +49,7 @@ const WaterDropHero = () => {
           <TiltCard />
         </div>
       </section>
-      <section className="grid place-items-center md:hidden">
+      <section className="grid place-items-start pl-8 md:hidden">
         <TiltCard />
       </section>
     </>
