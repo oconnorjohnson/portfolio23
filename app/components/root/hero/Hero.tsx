@@ -8,7 +8,7 @@ const WaterDropHero = () => {
   const router = useRouter();
   return (
     <>
-      <section className="text-gray-800 dark:text-slate-200 transition-colors flex flex-col-2 justify-around overflow-hidden bg-white dark:bg-black px-8 py-24 md:px-12 md:py-32">
+      <section className="text-gray-800 dark:text-slate-200 transition-colors flex flex-col-2 justify-around items-center overflow-hidden bg-white dark:bg-black px-8 py-24 md:px-12 md:py-32">
         <div className="">
           <div className="pointer-events-none relative z-10">
             <Reveal>
@@ -29,7 +29,7 @@ const WaterDropHero = () => {
             </Reveal>
             <Reveal>
               <p className="pointer-events-auto text-2xl text-slate-800 dark:text-slate-200 transition-colors">
-                I love React, Next.js, and Typescript. <br />
+                I love React, Next.js, Typescript, and PostgreSQL. <br />
                 What better way to move quickly and break nothing?
               </p>
             </Reveal>
