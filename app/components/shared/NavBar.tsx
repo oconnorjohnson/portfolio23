@@ -4,7 +4,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import DarkModeToggle from "./DarkModeToggle";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 const navVariants = {
   open: {
@@ -60,14 +59,14 @@ const LiquidSideNav = () => {
           <FiMenu />
         </motion.button>
       </div>
-      <Link href="/">
+      {/* <Link href="/">
         <div className="hidden sm:block text-gray-800 font-extrabold text-2xl transition-colors dark:text-gray-200">
           Daniel <span className="font-light ">O&apos;Connor</span> Johnson
         </div>
         <div className="sm:hidden text-gray-800 font-extrabold text-xl transition-colors dark:text-gray-200">
           Daniel Johnson
         </div>
-      </Link>
+      </Link> */}
       <div className="transform scale-75">
         <DarkModeToggle />
       </div>
