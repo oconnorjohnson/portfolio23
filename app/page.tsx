@@ -56,7 +56,7 @@ export default function Home() {
           <div className="py-8" />
           <div className="min-h-screen">
             <motion.div
-              className=" p-1 rounded-full bg-gray-500"
+              className=" p-1 rounded-full bg-gray-700 dark:bg-gray-300 transition-colors"
               animate={{ opacity: [1, 0, 0, 1, 1] }}
               transition={{ duration: 5, delay: 1 }}
               style={{ scale, y }}
