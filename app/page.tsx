@@ -6,6 +6,7 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 25]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const spacing = useTransform(scrollYProgress, [0, 1], ["0px", "150px"]);
 
   return (
     <>
@@ -33,24 +34,28 @@ export default function Home() {
           <motion.div
             className="border-t border-1  w-4/12 border-gray-700 dark:border-gray-300 transition-colors"
             animate={{ opacity: [1, 0, 0, 1, 1] }}
+            style={{ marginBottom: spacing }}
             transition={{ repeat: Infinity, duration: 5, delay: 0 }}
           />
           <div className="py-8" />
           <motion.div
             className="border-t border-1  w-3/12 border-gray-700 dark:border-gray-300 transition-colors"
             animate={{ opacity: [1, 0, 0, 1, 1] }}
+            style={{ marginBottom: spacing }}
             transition={{ repeat: Infinity, duration: 5, delay: 0.25 }}
           />
           <div className="py-8" />
           <motion.div
             className="border-t border-1  w-2/12 border-gray-700 dark:border-gray-300 transition-colors"
             animate={{ opacity: [1, 0, 0, 1, 1] }}
+            style={{ marginBottom: spacing }}
             transition={{ repeat: Infinity, duration: 5, delay: 0.5 }}
           />
           <div className="py-8" />
           <motion.div
             className="border-t border-1  w-1/12 border-gray-700 dark:border-gray-300 transition-colors"
             animate={{ opacity: [1, 0, 0, 1, 1] }}
+            style={{ marginBottom: spacing }}
             transition={{ repeat: Infinity, duration: 5, delay: 0.75 }}
           />
           <div className="py-8" />
