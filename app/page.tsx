@@ -4,9 +4,21 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 25]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 400]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const spacing = useTransform(scrollYProgress, [0, 1], ["0px", "150px"]);
+
+  const tagline1Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.4],
+    [0, 1, 0]
+  );
+  const tagline2Opacity = useTransform(
+    scrollYProgress,
+    [0.4, 0.6, 0.8],
+    [0, 1, 0]
+  );
+  const tagline3Opacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
 
   return (
     <>
@@ -32,38 +44,38 @@ export default function Home() {
         </div>
         <div className="grid place-items-center">
           <motion.div
-            className="border-t border-1  w-4/12 border-gray-700 dark:border-gray-300 transition-colors"
-            animate={{ opacity: [1, 0, 0, 1, 1] }}
+            className="border-t border-2 w-4/12 border-gray-300 dark:border-gray-700 transition-colors"
+            animate={{ opacity: [1, 0.25, 1] }}
             style={{ marginBottom: spacing }}
-            transition={{ repeat: Infinity, duration: 5, delay: 0 }}
+            transition={{ repeat: Infinity, duration: 3, delay: 0 }}
           />
           <div className="py-8" />
           <motion.div
-            className="border-t border-1  w-3/12 border-gray-700 dark:border-gray-300 transition-colors"
-            animate={{ opacity: [1, 0, 0, 1, 1] }}
+            className="border-t border-2 w-3/12 border-gray-300 dark:border-gray-700 transition-colors"
+            animate={{ opacity: [1, 0.25, 1] }}
             style={{ marginBottom: spacing }}
-            transition={{ repeat: Infinity, duration: 5, delay: 0.25 }}
+            transition={{ repeat: Infinity, duration: 3, delay: 0.25 }}
           />
           <div className="py-8" />
           <motion.div
-            className="border-t border-1  w-2/12 border-gray-700 dark:border-gray-300 transition-colors"
-            animate={{ opacity: [1, 0, 0, 1, 1] }}
+            className="border-t border-2 w-2/12 border-gray-300 dark:border-gray-700 transition-colors"
+            animate={{ opacity: [1, 0.25, 1] }}
             style={{ marginBottom: spacing }}
-            transition={{ repeat: Infinity, duration: 5, delay: 0.5 }}
+            transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
           />
           <div className="py-8" />
           <motion.div
-            className="border-t border-1  w-1/12 border-gray-700 dark:border-gray-300 transition-colors"
-            animate={{ opacity: [1, 0, 0, 1, 1] }}
+            className="border-t border-2 w-1/12 border-gray-300 dark:border-gray-700 transition-colors"
+            animate={{ opacity: [1, 0.25, 1] }}
             style={{ marginBottom: spacing }}
-            transition={{ repeat: Infinity, duration: 5, delay: 0.75 }}
+            transition={{ repeat: Infinity, duration: 3, delay: 0.75 }}
           />
           <div className="py-8" />
           <div className="min-h-screen">
             <motion.div
-              className=" p-1 rounded-full bg-gray-700 dark:bg-gray-300 transition-colors"
-              animate={{ opacity: [1, 0, 0, 1, 1] }}
-              transition={{ duration: 5, delay: 1 }}
+              className=" p-1  bg-gray-300 dark:bg-gray-700 transition-colors"
+              animate={{ opacity: [1, 0.25, 1] }}
+              transition={{ duration: 3, delay: 1 }}
               style={{ scale, y }}
             />
           </div>
