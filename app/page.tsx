@@ -6,7 +6,6 @@ export default function Home() {
     <>
       <main className="min-h-screen bg-white dark:bg-black transition-colors">
         <NavBar />
-        <Hero />
       </main>
     </>
   );
