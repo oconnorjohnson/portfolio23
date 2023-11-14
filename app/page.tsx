@@ -13,22 +13,14 @@ const Home = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 50]);
   const spacing = useTransform(scrollYProgress, [0, 1], ["0px", "150px"]);
 
-  const helloWorldY = useTransform(
-    scrollYProgress,
-    [0, 0.33, 0.66, 1],
-    ["100vh", "-30vh", "-30vh", "10vh"]
-  );
-  const helloWorldScale = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.5, 1],
-    [5, 4, 3, 1]
-  );
+  const helloWorldY = useTransform(scrollYProgress, [0, 1], ["100vh", "10vh"]);
+  const helloWorldScale = useTransform(scrollYProgress, [0, 1], [5, 1]);
   const helloWorldOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]); // Adjust the values as needed
 
   const experiencesY = useTransform(
     scrollYProgress,
-    [0, 0.33, 0.66, 1],
-    ["150vh", "150vh", "150vh", "-10vh"]
+    [0, 1],
+    ["150vh", "-10vh"]
   );
 
   return (
