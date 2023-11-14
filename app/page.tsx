@@ -119,9 +119,9 @@ const Home = () => {
 
         <motion.div
           style={{ y: experiencesY }}
-          className="text-black pt-4 dark:text-gray-600 transition-colors font-bold text-3xl md:text-5xl lg:text-7xl xl:text-8xl"
+          className="text-black pt-4 dark:text-gray-600 transition-colors font-bold text-2xl md:text-3xl lg:text-4xl xl:text-6xl"
         >
-          Let&apos;s build great UX
+          Let&apos;s build great products.
         </motion.div>
         <ul className="pb-4">
           <Link

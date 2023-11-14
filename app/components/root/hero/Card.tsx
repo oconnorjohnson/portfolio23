@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { FiArrowRight, FiGitPullRequest, FiArrowUpRight } from "react-icons/fi";
+import Link from "next/link";
 
 const CardWrapper = () => {
   return (
     <div className="p-8 bg-white dark:bg-black transition-colors text-black dark:text-white">
       <div className="w-full max-w-lg">
-        <ThreeDHoverScreenCard />
+        <Link href="/work">
+          <ThreeDHoverScreenCard />
+        </Link>
       </div>
     </div>
   );
