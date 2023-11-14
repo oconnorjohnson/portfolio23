@@ -68,6 +68,7 @@ const LiquidSideNav = () => {
           Daniel Johnson
         </div>
       </Link>
+
       <div className="transform scale-75">
         <DarkModeToggle />
       </div>

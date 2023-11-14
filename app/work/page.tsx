@@ -3,7 +3,6 @@ import { useState } from "react";
 import PocketModal from "@/app/components/projects/PocketModal";
 import CaresModal from "@/app/components/projects/CaresModal";
 import NavBar from "@/app/components/shared/NavBar";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Work() {
