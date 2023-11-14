@@ -13,15 +13,11 @@ const Home = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 50]);
   const spacing = useTransform(scrollYProgress, [0, 1], ["0px", "150px"]);
 
-  const helloWorldY = useTransform(scrollYProgress, [0, 1], ["100vh", "10vh"]);
+  const helloWorldY = useTransform(scrollYProgress, [0, 1], ["100%", "10%"]);
   const helloWorldScale = useTransform(scrollYProgress, [0, 1], [5, 1]);
   const helloWorldOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]); // Adjust the values as needed
 
-  const experiencesY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["150vh", "-10vh"]
-  );
+  const experiencesY = useTransform(scrollYProgress, [0, 1], ["150%", "-10%"]);
 
   return (
     <>
@@ -111,11 +107,11 @@ const Home = () => {
 
         <motion.div
           style={{ y: experiencesY }}
-          className="text-black pt-4 dark:text-gray-600 transition-colors font-bold text-2xl md:text-3xl lg:text-4xl xl:text-6xl"
+          className="text-black py-4 dark:text-gray-600 transition-colors font-bold text-2xl md:text-3xl lg:text-4xl xl:text-6xl"
         >
           Let&apos;s build great products.
         </motion.div>
-        <ul className="pb-4">
+        <ul className="pb-12">
           <Link
             href="/"
             className="px-4 text-gray-800 dark:text-gray-200 transition-colors"
