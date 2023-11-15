@@ -1,9 +1,19 @@
-import TextEditor from "@/app/components/admin/TextEditor";
+"use client";
+import dynamic from "next/dynamic";
+import "@uiw/react-markdown-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
 
-export default function Dashboard() {
+const MarkdownEditor = dynamic(
+  () => import("@uiw/react-markdown-editor").then((mod) => mod.default),
+  { ssr: false }
+);
+
+function HomePage() {
   return (
-    <>
-      <TextEditor />
-    </>
+    <div>
+      <MarkdownEditor value="Hello Markdown!" />
+    </div>
   );
 }
+
+export default HomePage;
